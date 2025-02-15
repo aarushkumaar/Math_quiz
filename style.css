@@ -1,0 +1,237 @@
+/* Background with radial gradient */
+body {
+    background-image: url(bg_math.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 5%;
+
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow:5px 5px 15px rgba(247, 245, 245, 0.3);
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #aaaaaa !important;  
+    border-radius: 20px; /* Added missing 'px' */
+    padding: 10px 20px;
+}
+
+/* Navbar Links */
+.nav-link_active, .nav-link {
+    text-decoration: none;
+    color: black !important;
+    font-weight: 500;
+    text-align: right;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link_active:hover, .nav-link:hover {
+    color: #555 !important;
+}
+
+/* Box Styling */
+.box {
+    background-color: #B8B8B8;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2% auto;
+    width: 80%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Fixed box-shadow */
+}
+
+/* Quiz Button */
+.quiz_button {
+    display: block; /* Centering */
+    margin: 20px auto;
+    cursor: pointer;
+    padding: 12px 24px;
+    border: none;
+    background-color: #666;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px; /* More rounded button */
+    transition: all 0.3s ease-in-out;
+}
+
+.quiz_button:hover {
+    background-color: #aaaaaa;
+    transform: scale(1.05);
+}
+
+.list{
+    align-content: left;
+}
+
+.text_input{
+    align-content: center;
+}
+
+#Q1B1, #Q1B2 {
+    width: 3%; 
+    height: 10%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.question_text{
+    margin-top: 0%;
+    padding-top: 0%;
+}
+
+.question{
+    padding-top: 10%; 
+}
+
+/* info box */ 
+
+ /* 🔹 Small Box (Initial State) */
+ .box_info {
+    width: 50px;
+    height: 50px;
+    background-color: #818181;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/*  Expanded Box */
+.expanded {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/*  Close Button */
+.close-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.score-box {
+    position:absolute;
+    width: 10%;
+    background-color: #faf3b7;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 65%;
+}
+
+/* Calculator Button */
+.calc-btn {
+    position: absolute;
+    top: 10px;
+    right: 120px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calc-btn:hover {
+    background-color: #0b7dda;
+}
+
+/* Calculator Panel */
+.calculator {
+    position: relative;
+    top: 50px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    margin-left: 2%;
+}
+
+#calcScreen {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    text-align: right;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    border-radius: 20%;
+}
+
+.calc-buttons button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.calc-buttons button:hover {
+    background-color: #ddd;
+}
+
+
+.question_Numb{
+    margin-top: 0%;
+    padding: 2%;
+}
+
+.next_1{
+    padding: 1%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+}
