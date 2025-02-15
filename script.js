@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".scroll-section");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("scroll-visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+});
+
 const question = [
     { num1: 12, num2: 12, num3: 3, answer1: "+", answer2: "-", result: 21 },
     { num1: 31, num2: 2, num3: 45, answer1: "*", answer2: "-", result: 17 },
@@ -91,3 +104,6 @@ function calcCalculate() {
         document.getElementById("calcScreen").value = "Error";
     }
 }
+
+
+
