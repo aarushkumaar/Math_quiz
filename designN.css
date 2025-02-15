@@ -1,0 +1,106 @@
+body {
+    background-image: url("images/B.jpg");
+    /* Use relative path */
+    background-size: cover;
+    /* Cover full screen */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* No repeating */
+    background-attachment: fixed;
+    /* Keep background fixed */
+}
+
+.app h1 {
+    font-size: 70px;
+    color: #101202;
+    border-bottom: 1px solid #c76262;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.quiz-container {
+    background: rgba(255, 255, 255, 0.9);
+    /* White background with transparency */
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    color: #060701;
+}
+
+.btn_1 {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 2%;
+    margin: 2%;
+    text-align: left;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 40%;
+    font-size: 115%;
+}
+
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+#next-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+}
+
+.correct {
+    background: #9aeabc;
+}
+
+.incorrect {
+    background: #ff9393;
+}
+
+
+/* Navbar Styling */
+.navbar {
+    background-color: #aaaaaa !important;  
+    border-radius: 20px; /* Added missing 'px' */
+    padding: 10px 20px;
+}
+
+/* Navbar Links */
+.nav-link_active, .nav-link {
+    text-decoration: none;
+    color: black !important;
+    font-weight: 500;
+    text-align: right;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link_active:hover, .nav-link:hover {
+    color: #555 !important;
+}

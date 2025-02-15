@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+   
+</head>
+
+<body>
+    <section id="navbar">
+        <div class="nav">
+            <div class="logo">DEVMAN</div>
+            <h1>MATHS QUIZ</h1>
+
+        </div>
+
+    </section>
+    <div class="head">
+        <h1>ROUND 1</h1>
+    </div>
+    <section id="q1">
+        <div class="sc">
+            <p>SCORE: <span id="countDisplay">0</span></p>
+        </div>
+        <div class="que">
+            <div class="q1">QUESTION 2</div>
+            <div class="qu">
+            Who is credited with the discovery of the concept of differentiation in calculus? Which mathematicians played a key role
+            in its development, and during which century was it introduced?</div>
+        </div>
+        <div class="ans">
+            <button onclick="change(); text();" id="one">1: Joost Burgi</button>
+            <button onclick="hange(); text();" id="two">2: Mahavir</button>
+            <button onclick="hangecolor(this) ; incrementCount(); text();" id="three">3: Newton and Gottfried Wilhelm Leibniz</button>
+            <button onclick="ange(); text();" id="four">4: Napier John </button>
+        </div>
+    </section>
+    <div class="ex" id="ex">
+        <p></p>
+    </div>
+    <section class="but">
+        <button id="btn"><a href="index3.html">Next Question >></a></button>
+    </section>
+    <script src="script2.js"></script>
+    <script>function change() {
+            document.getElementById("one").style.backgroundColor = "red";
+            document.getElementById("three").style.backgroundColor = "green";
+        }
+        function hange() {
+            document.getElementById("two").style.backgroundColor = "red";
+            document.getElementById("three").style.backgroundColor = "green";
+        }
+        function ange() {
+            document.getElementById("four").style.backgroundColor = "red";
+            document.getElementById("three").style.backgroundColor = "green";
+        }
+
+        function hangecolor(event) {
+            var color = "green";
+            event.style.backgroundColor = color;
+        }
+        function text() {
+                document.getElementById("ex").innerHTML = "EXPLAINATION:-Isaac Newton (1643-1727) and Gottfried Wilhelm Leibniz (1646-1716) were two of the most influential mathematicians and scientists in history. Both independently developed calculus, a mathematical framework essential for modern physics, engineering, and economics. Newton, an English physicist and mathematician, introduced calculus in the context of motion and physics, referring to it as the method of fluxions."
+            } </script>
+</body>
+
+</html>

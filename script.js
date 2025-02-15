@@ -1,109 +1,59 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll(".scroll-section");
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("scroll-visible");
-            }
-        });
-    }, { threshold: 0.2 });
+// let button = document.getElementById("btn")
 
-    sections.forEach(section => observer.observe(section));
-});
+// button.addEventListener("click", ()=>{
+//     document.querySelector(".qu").innerHTML = "Who is credited with the discovery of the concept of differentiation in calculus? Which mathematicians played a key role in its development, and during which century was it introduced?"
+//      document.querySelector(".q1").innerHTML = "QUESTION 2"
+// })
 
-const question = [
-    { num1: 12, num2: 12, num3: 3, answer1: "+", answer2: "-", result: 21 },
-    { num1: 31, num2: 2, num3: 45, answer1: "*", answer2: "-", result: 17 },
-    { num1: 54, num2: 3, num3: 13, answer1: "/", answer2: "+", result: 31 },
-    { num1: 16, num2: 31, num3: 4, answer1: "+", answer2: "-", result: 43 },
-    { num1: 27, num2: 3, num3: 4, answer1: "/", answer2: "*", result: 36 },
-];
 
-let currentQue = 0;
-let userscore = 0;
-
-function loadQuestion() {
-    let q = question[currentQue];
-    document.getElementById("question").innerHTML = `
-        ${q.num1} <input type="text" id="Q1B1" maxlength="1">
-        ${q.num2} <input type="text" id="Q1B2" maxlength="1">
-        ${q.num3} = ${q.result}
-    `;
+// function changecolor(event) {
+//     var color = "red";
+//     event.style.backgroundColor = color;
+// } 
+function change() {
+  document.getElementById("one").style.backgroundColor = "red";
+    document.getElementById("two").style.backgroundColor = "green";   
+}
+function hange() {
+  document.getElementById("three").style.backgroundColor = "red";
+    document.getElementById("two").style.backgroundColor = "green";   
+}
+function ange() {
+  document.getElementById("four").style.backgroundColor = "red";
+    document.getElementById("two").style.backgroundColor = "green";   
 }
 
-document.getElementById("next_1").onclick = function () {
-    let userInput1 = document.getElementById("Q1B1").value;
-    let userInput2 = document.getElementById("Q1B2").value;
-
-    let correctAnswer1 = question[currentQue].answer1;
-    let correctAnswer2 = question[currentQue].answer2;
-
-    if (userInput1 === correctAnswer1 && userInput2 === correctAnswer2) {
-        alert("✅ Correct! +10 Points");
-        userscore += 10;
-    } else {
-        alert("❌ Incorrect! -5 Points");
-        userscore -= 5;
-    }
-
-    document.getElementById("scoreBox").textContent = `Score: ${userscore}`; // Update Score UI
-    currentQue++;
-
-    if (currentQue < question.length) {
-        document.querySelector(".question_Numb").textContent = `Question ${currentQue + 1
-            }`;
-        loadQuestion();
-    } else {
-        alert("🎉 Quiz Completed! Final Score: " + userscore);
-        document.getElementById("question").innerHTML =
-            "You've completed all questions!";
-        document.getElementById("next_1").disabled = true;
-    }
-};
-
-loadQuestion();
-
-//info box
-
-let infoBox = document.getElementById("infoBox");
-let popupBox = document.getElementById("popupBox");
-let closeBtn = document.getElementById("closeBtn");
-
-// Expand Box on Click
-infoBox.onclick = function () {
-    popupBox.style.display = "flex";
-};
-
-//  Close the Box
-closeBtn.onclick = function () {
-    popupBox.style.display = "none";
-};
-
-// Toggle Calculator Visibility
-document.getElementById("calcBtn").onclick = function () {
-    let calcPanel = document.getElementById("calcPanel");
-    calcPanel.style.display =
-        calcPanel.style.display === "block" ? "none" : "block";
-};
-
-// Calculator Logic
-function calcInput(value) {
-    document.getElementById("calcScreen").value += value;
+function hangecolor(event) {
+    var color = "green";
+    event.style.backgroundColor = color;
 }
+// document.getElementsByClassName(".explain").onclick = function () {
+//   document.getElementById("ex").innerHTML = "ghghgghgggggggggg"
+// }
 
-function calcClear() {
-    document.getElementById("calcScreen").value = "";
-}
+function text(){
+document.getElementById("ex").innerHTML = " EXPLAINATION:-Rafael Bombelli was an Italian mathematician best known for his work on algebra and the introduction of complex numbers. He played a crucial role in making algebra more structured and accessible.Bombelli was among the first mathematicians to systematically use imaginary numbers.He defined 𝑖 i (the square root of -1) and showed how to work with such numbers in equations.His work provided a foundation for later mathematicians like Euler and Gauss."
+}                       
+// function angecolor(event) {
+//     var color = "red";
+//     event.style.backgroundColor = color;
+// }
+// function angecolor(event) {
+//     var color = "red";
+//     event.style.backgroundColor = color;
+// }
 
-function calcCalculate() {
-    try {
-        document.getElementById("calcScreen").value = eval(
-            document.getElementById("calcScreen").value
-        );
-    } catch {
-        document.getElementById("calcScreen").value = "Error";
-    }
-}
+// let answer = document.getElementById("btn")
 
+// answer.addEventListener("click", ()=>{
+//     document.querySelector(".one").innerHTML = "1: Joost Burgi"
+//     document.querySelector(".two").innerHTML = "2: Mahavir"
+//     document.querySelector(".three").innerHTML = "3: Newton and Gottfried Wilhelm Leibniz"
+//      document.querySelector(".four").innerHTML = "4: Napier John "    
+// })
+// let butto = document.getElementById("btn")
 
-
+// butto.addEventListener("dblclick", ()=>{
+//     document.querySelector(".qu").innerHTML = "Who is credited with the discovery of the concept of differentiation in calculus? Which mathematicians played a key role in its development, and during which century was it introduced?"
+//      document.querySelector(".q1").innerHTML = "QUESTION 3"
+// })

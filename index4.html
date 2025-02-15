@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  
+</head>
+
+<body>
+    <section id="navbar">
+        <div class="nav">
+            <div class="logo">DEVMAN</div>
+            <h1>MATHS QUIZ</h1>
+
+        </div>
+
+    </section>
+    <div class="head">
+        <h1>ROUND 1</h1>
+    </div>
+    <section id="q1">
+        <div class="sc">
+            <p>SCORE: <span id="countDisplay">0</span></p>
+        </div>
+        <div class="que">
+            <div class="q1">QUESTION 4</div>
+            <div class="qu">Mathematics has evolved over centuries, shaping the way we understand numbers, patterns, and the universe. Among the
+            great mathematicians, one figure is often regarded as the Father of Mathematics. Who is credited with this title, and
+            what were his major contributions?</div>
+        </div>
+        <div class="ans">
+            <button onclick="change(); text();" id="one">1: Pythagoru</button>
+            <button onclick="ange(); text();" id="two">2: David Hilbert</button>
+            <button onclick="hange(); text();" id="three">3: Euclid</button>
+            <button onclick="hangecolor(this) ; incrementCount(); text();" id="four">4: Archimedes </button>
+        </div>
+    </section>
+    <div class="ex" id="ex">
+        <p></p>
+    </div>
+    <section class="but">
+        <button id="btn"><a href="index5.html">Next Question >></a></button>
+    </section>
+    <script src="script2.js"></script>
+    <script>function change() {
+            document.getElementById("one").style.backgroundColor = "red";
+            document.getElementById("four").style.backgroundColor = "green";
+        }
+         function text() {
+                document.getElementById("ex").innerHTML = "EXPLAINATION:-Archimedes of Syracuse (287 BCE – 212 BCE) was one of the greatest mathematicians and inventors of ancient Greece. He made groundbreaking contributions to geometry, calculus, and mechanics, laying the foundation for modern mathematics and physics. "
+            }
+        function hange() {
+            document.getElementById("three").style.backgroundColor = "red";
+            document.getElementById("four").style.backgroundColor = "green";
+        }
+        function ange() {
+            document.getElementById("two").style.backgroundColor = "red";
+            document.getElementById("four").style.backgroundColor = "green";
+        }
+
+        function hangecolor(event) {
+            var color = "green";
+            event.style.backgroundColor = color;
+        }
+        </script>
+</body>
+
+</html>

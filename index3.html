@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  
+</head>
+
+<body>
+    <section id="navbar">
+        <div class="nav">
+            <div class="logo">DEVMAN</div>
+            <h1>MATHS QUIZ</h1>
+
+        </div>
+
+    </section>
+    <div class="head">
+        <h1>ROUND 1</h1>
+    </div>
+    <section id="q1">
+        <div class="sc">
+            <p>SCORE: <span id="countDisplay">0</span></p>
+        </div>
+        <div class="que">
+            <div class="q1">QUESTION 3</div>
+            <div class="qu">In which year did Aryabhatta introduce the concept of zero? While he made significant contributions to mathematics!!
+            </div>
+        </div>
+        <div class="ans">
+            <button onclick="hangecolor(this) ; incrementCount(); text();" id="one">1: 5th Century CE</button>
+            <button onclick="change() ; text();" id="two">2: 6th Century CE</button>
+            <button onclick="hange(); text();" id="three">3: 628 CE</button>
+            <button onclick="ange(); text();" id="four">4: 720 CE</button>
+        </div>
+    </section>
+    <div class="ex" id="ex">
+        <p></p>
+    </div>
+    <section class="but">
+        <button id="btn"><a href="index4.html">Next Question >></a></button>
+    </section>
+    <script src="script2.js"></script>
+    <script>function change() {
+            document.getElementById("two").style.backgroundColor = "red";
+            document.getElementById("one").style.backgroundColor = "green";
+        }
+        function hange() {
+            document.getElementById("three").style.backgroundColor = "red";
+            document.getElementById("one").style.backgroundColor = "green";
+        }
+        function ange() {
+            document.getElementById("four").style.backgroundColor = "red";
+            document.getElementById("one").style.backgroundColor = "green";
+        }
+         function text() {
+                document.getElementById("ex").innerHTML = "EXPLAINATION:-Aryabhata (476–550 CE) was one of the greatest mathematicians and astronomers of ancient India. His most famous work, Aryabhatiya, introduced several groundbreaking concepts in mathematics, including the approximation of π (pi), the place-value system, and the concept of zero (though he did not use a symbol for it explicitly)."
+            }
+
+        function hangecolor(event) {
+            var color = "green";
+
+            event.style.backgroundColor = color;
+        }</script>
+</body>
+
+</html>
