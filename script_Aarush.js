@@ -63,6 +63,14 @@ document.getElementById("next_1").onclick = function () {
 
 loadQuestion();
 
+// function endscore(score){
+//     let scoreBox = document.getElementById("End_score_box"); 
+//     scoreBox.innerHTML = 'YOUR FINAL SCORE IS $("round_3_score")'; 
+// }
+//  document.getElementById("End_score_box").textContent = `Score: ${round_3_score}`
+
+
+
 //info box
 
 let infoBox = document.getElementById("infoBox");
@@ -104,6 +112,3 @@ function calcCalculate() {
         document.getElementById("calcScreen").value = "Error";
     }
 }
-
-
-

@@ -1,10 +1,6 @@
 /* Background with radial gradient */
 body {
-    background-image: url(bg_math.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(10px);
+
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -18,7 +14,7 @@ h1 {
 
     font-size: 3rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow:5px 5px 15px rgba(247, 245, 245, 0.3);
+    text-shadow: 5px 5px 15px rgba(247, 245, 245, 0.3);
 }
 
 h2 {
@@ -30,13 +26,15 @@ h2 {
 
 /* Navbar Styling */
 .navbar {
-    background-color: #aaaaaa !important;  
-    border-radius: 20px; /* Added missing 'px' */
+    background-color: #aaaaaa !important;
+    border-radius: 20px;
+    /* Added missing 'px' */
     padding: 10px 20px;
 }
 
 /* Navbar Links */
-.nav-link_active, .nav-link {
+.nav-link_active,
+.nav-link {
     text-decoration: none;
     color: black !important;
     font-weight: 500;
@@ -44,7 +42,8 @@ h2 {
     transition: color 0.3s ease-in-out;
 }
 
-.nav-link_active:hover, .nav-link:hover {
+.nav-link_active:hover,
+.nav-link:hover {
     color: #555 !important;
 }
 
@@ -56,7 +55,8 @@ h2 {
     border-radius: 10px;
     margin: 2% auto;
     width: 80%;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Fixed box-shadow */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Fixed box-shadow */
 }
 
 .box {
@@ -66,7 +66,8 @@ h2 {
     border-radius: 10px;
     margin: 2% auto;
     width: 80%;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Fixed box-shadow */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Fixed box-shadow */
 }
 
 .scroll-section {
@@ -74,6 +75,7 @@ h2 {
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
 .scroll-visible {
     opacity: 1;
     transform: translateY(0);
@@ -81,7 +83,8 @@ h2 {
 
 /* Quiz Button */
 .quiz_button {
-    display: block; /* Centering */
+    display: block;
+    /* Centering */
     margin: 20px auto;
     cursor: pointer;
     padding: 12px 24px;
@@ -90,7 +93,8 @@ h2 {
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 50px; /* More rounded button */
+    border-radius: 50px;
+    /* More rounded button */
     transition: all 0.3s ease-in-out;
 }
 
@@ -99,34 +103,35 @@ h2 {
     transform: scale(1.05);
 }
 
-.list{
+.list {
     align-content: left;
 }
 
-.text_input{
+.text_input {
     align-content: center;
 }
 
-#Q1B1, #Q1B2 {
-    width: 3%; 
+#Q1B1,
+#Q1B2 {
+    width: 3%;
     height: 10%;
     font-size: 20px;
     text-align: center;
 }
 
-.question_text{
+.question_text {
     margin-top: 0%;
     padding-top: 0%;
 }
 
-.question{
-    padding-top: 10%; 
+.question {
+    padding-top: 10%;
 }
 
-/* info box */ 
+/* info box */
 
- /* 🔹 Small Box (Initial State) */
- .box_info {
+/* 🔹 Small Box (Initial State) */
+.box_info {
     width: 50px;
     height: 50px;
     background-color: #818181;
@@ -170,7 +175,7 @@ h2 {
 }
 
 .score-box {
-    position:absolute;
+    position: absolute;
     width: 10%;
     background-color: #faf3b7;
     color: #333;
@@ -183,9 +188,8 @@ h2 {
 
 /* Calculator Button */
 .calc-btn {
-    position: absolute;
     top: 10px;
-    right: 120px;
+    margin-right: 80%;
     background-color: #2196F3;
     color: white;
     border: none;
@@ -245,12 +249,12 @@ h2 {
 }
 
 
-.question_Numb{
+.question_Numb {
     margin-top: 0%;
     padding: 2%;
 }
 
-.next_1{
+.next_1 {
     padding: 1%;
     margin-top: 5%;
     margin-bottom: 0%;
@@ -258,15 +262,18 @@ h2 {
 
 .container_about_us {
     display: flex;
-    justify-content: center; /* Center the boxes */
-    gap: 20px; /* Space between boxes */
-    flex-wrap: wrap; /* Allow boxes to wrap in small screens */
+    justify-content: center;
+    /* Center the boxes */
+    gap: 20px;
+    /* Space between boxes */
+    flex-wrap: wrap;
+    /* Allow boxes to wrap in small screens */
     padding: 20px;
 }
 
-.box_about_us {
-    width: 30%;
-    height: 32rem;
+.box_end {
+    width: 40%;
+    height: 32%;
     background-color: lightblue;
     border-radius: 10px;
     text-align: center;
@@ -275,20 +282,40 @@ h2 {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.box_about_us:hover{
-        transform: scale(1.05);
-        transition: 0.4s ease-in-out;
-        background-color: rgb(133, 196, 218); 
-    
+.box_end:hover {
+    transform: scale(1.05);
+    transition: 0.4s ease-in-out;
+    background-color: rgb(133, 196, 218);
+
 }
 
-.image{
-    height: 40%;
-    border-radius: 50rem;
-    border: #333;
-    border-width: 2px;
+.box_about_us {
+    width: 30%;
+    height: 50rem;
+    background-color: lightblue;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
- .about_us-name{
+
+.box_about_us:hover {
+    transform: scale(1.05);
+    transition: 0.4s ease-in-out;
+    background-color: rgb(133, 196, 218);
+}
+
+/* Image styling */
+.image {
+    height: 40%;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; /* Centers the image */
+}
+
+/* Name styling */
+.about_us-name {
     text-decoration: underline;
     text-decoration-style: solid;
- }
+}
