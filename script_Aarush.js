@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".scroll-section");
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -20,8 +20,8 @@ const question = [
 ];
 
 let currentQue = 0;
-let score = parseInt(sessionStorage.getItem("round_2_score") || 0);
-console.log("Previous Score:", score);
+let previousScore = parseInt(sessionStorage.getItem("round_2_score") || 0);
+let userscore = previousScore;  // Carry forward the score
 
 function loadQuestion() {
     let q = question[currentQue];
@@ -48,17 +48,15 @@ document.getElementById("next_1").onclick = function () {
     }
 
     document.getElementById("scoreBox").textContent = `Score: ${userscore}`; // Update Score UI
-    sessionStorage.setItem("round_3_score", score);
+    sessionStorage.setItem("round_3_score", userscore);
     currentQue++;
 
     if (currentQue < question.length) {
-        document.querySelector(".question_Numb").textContent = `Question ${currentQue + 1
-            }`;
+        document.querySelector(".question_Numb").textContent = `Question ${currentQue + 1}`;
         loadQuestion();
     } else {
         alert("🎉 Quiz Completed! Final Score: " + userscore);
-        document.getElementById("question").innerHTML =
-            "You've completed all questions!";
+        document.getElementById("question").innerHTML = "You've completed all questions!";
         document.getElementById("next_1").disabled = true;
     }
 };

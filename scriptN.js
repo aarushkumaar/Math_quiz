@@ -68,7 +68,7 @@ const nextButton = document.getElementById("next-btn");
 const explanationBox = document.getElementById("explanation-box"); // Get the explanation box
 
 let currentQuestionIndex = 0;
-let score = parseInt(sessionStorage.getItem("round_1_score") || 0);  
+let score = parseInt(sessionStorage.getItem("clickCount") || 0);  
   //take score from previous round, convert intro integer again 
 
 function startQuiz() {
