@@ -58,6 +58,11 @@ document.getElementById("next_1").onclick = function () {
         alert("🎉 Quiz Completed! Final Score: " + userscore);
         document.getElementById("question").innerHTML = "You've completed all questions!";
         document.getElementById("next_1").disabled = true;
+
+        // Redirect after 10 seconds
+        setTimeout(function () {
+            window.location.href = "end.html"; 
+        }, 15000); // 
     }
 };
 
