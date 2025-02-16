@@ -62,11 +62,17 @@ document.getElementById("next_1").onclick = function () {
         // Redirect after 10 seconds
         setTimeout(function () {
             window.location.href = "end.html"; 
-        }, 15000); // 
+        }, 9000); // 
     }
 };
 
 loadQuestion();
+
+function reset_Score() {
+    sessionStorage.setItem("round_3_score", 0);
+    document.getElementById("scoreBox").textContent = `Score: 0`;
+    alert("Score has been reset!");
+}
 
 // function endscore(score){
 //     let scoreBox = document.getElementById("End_score_box"); 
