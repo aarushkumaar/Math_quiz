@@ -1,16 +1,16 @@
 const questions = [
-    {
-        question:
-            "Which Swiss mathematician introduced the modern notation for the function f(x)?",
-        answers: [
-            { text: "Euclid", correct: false },
-            { text: "Bernhard Riemann", correct: false },
-            { text: "Euler", correct: true },
-            { text: "Kurt Gödel", correct: false },
-        ],
-        explanation:
-            "Leonhard Euler introduced the modern notation for functions, using f(x) in the 18th century.uler's function notation f(x) allowed for a clear and systematic way to express mathematical relationships, making it easier to define and analyze functions. His work laid the foundation for modern mathematical analysis, and his notations, including Σ (sigma) notation for summation and e for the base of natural logarithms, are still widely used today. Euler's influence on mathematics remains profound, as his innovations continue to shape various branches of science and engineering.",
-    },
+    // {
+    //     question:
+    //         "Which Swiss mathematician introduced the modern notation for the function f(x)?",
+    //     answers: [
+    //         { text: "Euclid", correct: false },
+    //         { text: "Bernhard Riemann", correct: false },
+    //         { text: "Euler", correct: true },
+    //         { text: "Kurt Gödel", correct: false },
+    //     ],
+    //     explanation:
+    //         "Leonhard Euler introduced the modern notation for functions, using f(x) in the 18th century.uler's function notation f(x) allowed for a clear and systematic way to express mathematical relationships, making it easier to define and analyze functions. His work laid the foundation for modern mathematical analysis, and his notations, including Σ (sigma) notation for summation and e for the base of natural logarithms, are still widely used today. Euler's influence on mathematics remains profound, as his innovations continue to shape various branches of science and engineering.",
+    // },
     {
         question:
             "Who developed the binary number system, which became the foundation of modern computing?",
@@ -35,18 +35,18 @@ const questions = [
         explanation:
             "The Babylonians are known for the earliest recorded use of a place-value number system.The Babylonian numeral system, developed around 1900–1600 BCE, was base-60 (sexagesimal) rather than base-10.They used cuneiform script and a positional system where the value of a digit depended on its position, similar to modern decimal notation.This system influenced later numeral systems, including those used by the Greeks and Indians.",
     },
-    {
-        question:
-            "Which mathematician from ancient Greece is famous for his work in geometry and mechanics?",
-        answers: [
-            { text: "Euclid", correct: false },
-            { text: "Joost Burgi", correct: false },
-            { text: "Archimedes", correct: true },
-            { text: "Pythagoras", correct: false },
-        ],
-        explanation:
-            "Archimedes, an ancient Greek mathematician, is renowned for his groundbreaking contributions to geometry and mechanics. Born in 287 BCE in Syracuse, he developed numerous mathematical theorems, including formulas for calculating areas, volumes, and surface areas of geometric shapes.",
-    },
+    // {
+    //     question:
+    //         "Which mathematician from ancient Greece is famous for his work in geometry and mechanics?",
+    //     answers: [
+    //         { text: "Euclid", correct: false },
+    //         { text: "Joost Burgi", correct: false },
+    //         { text: "Archimedes", correct: true },
+    //         { text: "Pythagoras", correct: false },
+    //     ],
+    //     explanation:
+    //         "Archimedes, an ancient Greek mathematician, is renowned for his groundbreaking contributions to geometry and mechanics. Born in 287 BCE in Syracuse, he developed numerous mathematical theorems, including formulas for calculating areas, volumes, and surface areas of geometric shapes.",
+    // },
     {
         question:
             "The term 'algorithm' is derived from the name of which mathematician?",

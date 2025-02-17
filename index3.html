@@ -14,33 +14,36 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary px-3">
-    <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#">DEVMAN</a>
-        <span class="navbar-text mx-3 fw-semibold"></span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.htm">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="que_1.html">ROUND 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="indexN.html">ROUND 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="round_3.html">ROUND 3</a>
-                </li>
-
-            </ul>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.htm">DEVMAN</a>
+            <span class="navbar-text mx-3 fw-semibold"></span>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.htm"> ABOUT US </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="que_1.html"> ROUND 1 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="indexN.html"> ROUND 2 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="round_3.html"> ROUND 3 </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
     <div class="head">
         <h1>ROUND 1</h1>
     </div>
@@ -49,22 +52,23 @@
             <p>SCORE: <span id="countDisplay">0</span></p>
         </div>
         <div class="que">
-            <div class="q1">QUESTION 3</div>
-            <div class="qu">In which year did Aryabhatta introduce the concept of zero? While he made significant contributions to mathematics!!
+            <div class="q1">QUESTION 2</div>
+            <div class="qu">Which mathematician's groundbreaking work is contained in the famous 'Lost Notebook,' discovered decades after his death?
             </div>
         </div>
         <div class="ans">
-            <button onclick="hangecolor(this) ; incrementCount(); text();" id="one">1: 5th Century CE</button>
-            <button onclick="change() ; text();" id="two">2: 6th Century CE</button>
-            <button onclick="hange(); text();" id="three">3: 628 CE</button>
-            <button onclick="ange(); text();" id="four">4: 720 CE</button>
+            <button onclick="hangecolor(this) ; incrementCount(); text();" id="one">1: Srinivasa Ramanujan</button>
+            <button onclick="change() ; text();" id="two">2: G.H Hardy</button>
+            <button onclick="hange(); text();" id="three">3: G.N Watson
+            </button>
+            <button onclick="ange(); text();" id="four">4: Bruce C. Berndt</button>
         </div>
     </section>
     <div class="ex" id="ex">
         <p></p>
     </div>
     <section class="but">
-        <button id="btn"><a href="index4.html">Next Question >></a></button>
+        <button id="btn"><a href="index5.html">Next Question >></a></button>
     </section>
     <script src="script2.js"></script>
     <script>function change() {
@@ -80,7 +84,7 @@
             document.getElementById("one").style.backgroundColor = "green";
         }
          function text() {
-                document.getElementById("ex").innerHTML = "EXPLAINATION:-Aryabhata (476–550 CE) was one of the greatest mathematicians and astronomers of ancient India. His most famous work, Aryabhatiya, introduced several groundbreaking concepts in mathematics, including the approximation of π (pi), the place-value system, and the concept of zero (though he did not use a symbol for it explicitly)."
+                document.getElementById("ex").innerHTML = "Explanation:- The 'Lost Notebook' contains the groundbreaking work of Srinivasa Ramanujan, an Indian mathematician known for his extraordinary contributions to number theory, modular forms, and infinite series. Discovered in 1976 by George Andrews at the Trinity College Library, Cambridge, the notebook includes Ramanujan's final mathematical insights, including his pioneering work on mock theta functions, q-series, and partition theory.";
             }
 
         function hangecolor(event) {

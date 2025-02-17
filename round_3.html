@@ -35,13 +35,17 @@
   
           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center">
-                  <li class="nav-item mx-3">
-                      <div class="progress" style="width: 150px; height: 10px;">
-                          <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 99.9%;"></div>
-                      </div>
-                  </li>
                   <li class="nav-item">
                       <a class="nav-link" href="aboutUs.htm"> ABOUT US </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="que_1.html"> ROUND 1 </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="indexN.html"> ROUND 2 </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="round_3.html"> ROUND 3 </a>
                   </li>
               </ul>
           </div>
@@ -79,12 +83,16 @@
           <button onclick="calcInput('/')">÷</button>
         </div>
       </div>
-
       <h1 class="question_Numb">QUESTION 1</h1>
+<div id="question"></div>
+
+
+      
+      <div id="timer" class="timer">Time Left: 15s</div>
+
 
       <p id="question" class="question_number"></p>
-      <button id="next_1" class="next_1">Next question</button>
-
+<button id="next_1">Next Question</button>
       <!--info box-->
       <div class="box_info" id="infoBox">info</div>
 
@@ -92,10 +100,13 @@
       <div class="expanded" id="popupBox" style="display: none">
         <h2>Game Rules: Math Operator Quiz 🎯</h2>
         <p>
-          🔢 How to Play: Fill in the missing operators (+, -, ×, /) in two text
-          boxes. Click Submit to check your answer. 🏆 Scoring: ✔️ +10 points
-          for each correct answer. ❌ -5 points for each wrong answer. 🎯 Goal:
-          Solve all questions and get the highest score! 🚀
+          🔢 How to Play:  <br>
+          Fill in the missing operators (+, -, ×, /)  <br>
+          in two text boxes. Click Submit to check your answer. <br>
+          🏆 Scoring:  <br>
+          ✔️ +10 points for each correct answer. <br>
+          ❌ -5 points for each wrong answer. <br>
+          🎯 Goal: Solve all questions and get the highest score! 🚀 <br>
         </p>
         <button class="close-btn" id="closeBtn">Close</button>
       </div>

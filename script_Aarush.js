@@ -13,26 +13,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const question = [
     { num1: 12, num2: 12, num3: 3, answer1: "+", answer2: "-", result: 21 },
-    { num1: 31, num2: 2, num3: 45, answer1: "*", answer2: "-", result: 17 },
+    { num1: 98, num2: 14, num3: 7, answer1: "/", answer2: "-", result: 1 },
     { num1: 54, num2: 3, num3: 13, answer1: "/", answer2: "+", result: 31 },
-    { num1: 16, num2: 31, num3: 4, answer1: "+", answer2: "-", result: 43 },
-    { num1: 27, num2: 3, num3: 4, answer1: "/", answer2: "*", result: 36 },
+    { num1: 512, num2: 8, num3: 4, answer1: "/", answer2: "*", result: 16 },
+    { num1: 729, num2: 27, num3: 3, answer1: "/", answer2: "-", result: 24 },
 ];
 
 let currentQue = 0;
 let previousScore = parseInt(sessionStorage.getItem("round_2_score") || 0);
-let userscore = previousScore;  // Carry forward the score
+let userscore = previousScore; 
+let timeLeft = 20; // Timer duration (in seconds)
+let timerInterval;
 
+// Load Question & Start Timer
 function loadQuestion() {
+    clearInterval(timerInterval); // Clear previous timer
+    timeLeft = 20; // Reset timer
+
     let q = question[currentQue];
     document.getElementById("question").innerHTML = `
         ${q.num1} <input type="text" id="Q1B1" maxlength="1">
         ${q.num2} <input type="text" id="Q1B2" maxlength="1">
         ${q.num3} = ${q.result}
     `;
+
+    document.getElementById("timer").textContent = `Time Left: ${timeLeft}s`;
+    
+    timerInterval = setInterval(updateTimer, 1000); // Start timer
+}
+
+// Timer Function
+function updateTimer() {
+    if (timeLeft > 0) {
+        timeLeft--;
+        document.getElementById("timer").textContent = `Time Left: ${timeLeft}s`;
+    } else {
+        clearInterval(timerInterval);
+        alert("⏳ Time's up! -5 Points");
+        userscore -= 5;
+        document.getElementById("scoreBox").textContent = `Score: ${userscore}`;
+        nextQuestion();
+    }
 }
 
 document.getElementById("next_1").onclick = function () {
+    clearInterval(timerInterval); // Stop the timer when user answers
+    
     let userInput1 = document.getElementById("Q1B1").value;
     let userInput2 = document.getElementById("Q1B2").value;
 
@@ -47,10 +73,21 @@ document.getElementById("next_1").onclick = function () {
         userscore -= 5;
     }
 
-    document.getElementById("scoreBox").textContent = `Score: ${userscore}`; // Update Score UI
+    document.getElementById("scoreBox").textContent = `Score: ${userscore}`;
     sessionStorage.setItem("round_3_score", userscore);
-    currentQue++;
 
+    // Prevent extra calls
+    if (currentQue < question.length - 1) {
+        currentQue++; 
+        loadQuestion();
+    } else {
+        endQuiz();
+    }
+};
+
+// Move to Next Question
+function nextQuestion() {
+    currentQue++;
     if (currentQue < question.length) {
         document.querySelector(".question_Numb").textContent = `Question ${currentQue + 1}`;
         loadQuestion();
@@ -59,13 +96,13 @@ document.getElementById("next_1").onclick = function () {
         document.getElementById("question").innerHTML = "You've completed all questions!";
         document.getElementById("next_1").disabled = true;
 
-        // Redirect after 10 seconds
-        setTimeout(function () {
+        setTimeout(() => {
             window.location.href = "end.html"; 
-        }, 9000); // 
+        }, 9000);
     }
-};
+}
 
+// Start the First Question
 loadQuestion();
 
 function reset_Score() {
@@ -123,3 +160,4 @@ function calcCalculate() {
         document.getElementById("calcScreen").value = "Error";
     }
 }
+

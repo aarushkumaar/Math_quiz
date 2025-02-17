@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Bundle (JS + Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+ 
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.htm">DEVMAN</a>
+            <span class="navbar-text mx-3 fw-semibold"></span>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.htm"> ABOUT US </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="que_1.html"> ROUND 1 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="indexN.html"> ROUND 2 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="round_3.html"> ROUND 3 </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="head">
+      <h1>ROUND 1</h1>
+    </div>
+    <section id="q1">
+      <div class="sc">
+        <p>SCORE: <span id="countDisplay">0</span></p>
+      </div>
+      <div class="que">
+        <div class="q1">QUESTION 2</div>
+        <div class="qu">
+          Who is credited with the discovery of the concept of differentiation
+          in calculus?
+        </div>
+      </div>
+      <div class="ans">
+        <button onclick="change(); text();" id="one">1: Joost Burgi</button>
+        <button onclick="hange(); text();" id="two">2: Mahavir</button>
+        <button
+          onclick="hangecolor(this) ; incrementCount(); text();"
+          id="three"
+        >
+          3: Newton and Gottfried Wilhelm Leibniz
+        </button>
+        <button onclick="ange(); text();" id="four">4: Napier John</button>
+      </div>
+    </section>
+    <div class="ex" id="ex">
+      <p></p>
+    </div>
+    <section class="but">
+      <button id="btn"><a href="index3.html">Next Question >></a></button>
+    </section>
+    <script src="script2.js"></script>
+    <script>
+      function change() {
+        document.getElementById("one").style.backgroundColor = "red";
+        document.getElementById("three").style.backgroundColor = "green";
+      }
+      function hange() {
+        document.getElementById("two").style.backgroundColor = "red";
+        document.getElementById("three").style.backgroundColor = "green";
+      }
+      function ange() {
+        document.getElementById("four").style.backgroundColor = "red";
+        document.getElementById("three").style.backgroundColor = "green";
+      }
+
+      function hangecolor(event) {
+        var color = "green";
+        event.style.backgroundColor = color;
+      }
+      function text() {
+        document.getElementById("ex").innerHTML =
+          "Explanation:- The 'Lost Notebook' contains the groundbreaking work of Srinivasa Ramanujan, an Indian mathematician known for his extraordinary contributions to number theory, modular forms, and infinite series. Discovered in 1976 by George Andrews at the Trinity College Library, Cambridge, the notebook includes Ramanujan's final mathematical insights, including his pioneering work on mock theta functions, q-series, and partition theory.";
+      }
+    </script>
+  </body>
+</html>

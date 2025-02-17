@@ -319,3 +319,60 @@ h2 {
     text-decoration: underline;
     text-decoration-style: solid;
 }
+
+
+.timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 5%;
+}
+
+.container_about_us {
+    display: flex;
+    justify-content: space-between; /* Align boxes in left-right-left order */
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    padding: 20px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.box_about_us {
+    width: 30%;
+    height: 50rem;
+    background-color: lightblue;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.box_about_us::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    left: 10%;
+    bottom: -10px;
+}
+
+.box_about_us:last-child::after {
+    display: none; /* Remove the line after the last box */
+}
+
+.box_about_us:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.box_about_us:nth-child(even) {
+    align-self: flex-end;
+}
